@@ -5,7 +5,7 @@ const nextConfig = {
     name: 'drumtechphoto',
     description: 'The official store for drumtechphoto.',
     icon: '/img/logo.svg',
-    listUrl: 'https://github.com/drumtechphoto/kasm-registry/',
+    listUrl: 'https://drumtechphoto.github.io/kasm-registry/',
     contactUrl: 'https://drumtechphoto.com/contact',
   },
   reactStrictMode: true,
