@@ -2,11 +2,11 @@
 
 const nextConfig = {
   env: {
-    name: 'Kasm Technologies',
-    description: 'The official store for Kasm supported workspaces.',
+    name: 'drumtechphoto',
+    description: 'The official store for drumtechphoto.',
     icon: '/img/logo.svg',
-    listUrl: 'https://registry.kasmweb.com/',
-    contactUrl: 'https://kasmweb.com/support',
+    listUrl: 'https://github.com/drumtechphoto/kasm-registry/',
+    contactUrl: 'https://drumtechphoto.com/contact',
   },
   reactStrictMode: true,
   swcMinify: true,
