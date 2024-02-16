@@ -2,7 +2,7 @@
   "friendly_name": "Sublime Text",
   "image_src": "sublime-text.png",
   "description": "Sublime Text is a sophisticated text editor for code, markup and prose.",
-  "name": "kasmweb/sublime-text:1.15.0",
+  "name": "kasmweb/core-ubuntu-focal:1.14.0",
   "cores": 2,
   "memory": 2768,
   "gpu_count": 0,
