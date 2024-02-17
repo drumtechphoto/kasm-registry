@@ -3,12 +3,12 @@ name: Build
 on:
   push:
     branches-ignore:
-      - 'gh-pages'
+      - 'gh-page'
 permissions:
   contents: write
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: Chromium, Sublime Text
 
     steps:
       - uses: actions/checkout@v3
@@ -22,5 +22,5 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages
+          branch: main
           folder: public
