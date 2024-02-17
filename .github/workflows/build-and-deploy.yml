@@ -1,26 +1,15 @@
-name: Build
+name: Docker Image CI for GHCR
 
 on:
-  push:
-    branches-ignore:
-      - 'gh-page'
-permissions:
-  contents: write
-jobs:
-  build:
-    runs-on: Chromium, Sublime Text
+  push
 
+jobs:
+  build_and_publish:
+    runs-on: kasmweb/core-ubuntu-bionic:1.14.0-rolling
     steps:
       - uses: actions/checkout@v3
-
-      - name: Build # Have to run processing first so the list.json exists to be included in the the deploy
+      - name: Build and push the image
         run: |
-          npm ci --prefix processing 
-          npm ci --prefix site
-          ./build_all_branches.sh
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: main
-          folder: public
+          docker login --username drumtechphoto --password ${{ secrets.GH_PAT }} ghcr.io
+          docker build . --tag ghcr.io/drumtechphoto/kasm-registry/video-editing-desktp:latest
+          docker push ghcr.io/drumtechphoto/kasm-registry/video-editing-desktp:latest
